@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PascoCity | TechStore & Service - Cerro de Pasco, Perú</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span id="topHorario">🕘 Lun a Sáb 9am - 7pm</span>
+      <span id="topDireccion">📍 Cerro de Pasco, Perú</span>
+      <a id="topWhatsapp" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- CABECERA -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="PascoCity - Inicio">
+        <span class="logo__icon">P</span>
+        <span class="logo__text">
+          <strong>PascoCity</strong>
+          <small>TechStore &amp; Service</small>
+        </span>
+      </a>
+
+      <form class="search" id="searchForm" role="search">
+        <select id="searchCat" aria-label="Categoría">
+          <option value="todas">Todas</option>
+          <option value="celulares">Celulares</option>
+          <option value="computadoras">Computadoras</option>
+          <option value="laptops">Laptops</option>
+          <option value="audifonos">Audífonos</option>
+        </select>
+        <input type="search" id="searchInput" placeholder="Busca en nuestro catálogo">
+        <button type="submit">BUSCAR</button>
+      </form>
+
+      <div class="header__actions">
+        <a href="#mantenimiento" class="btn btn--ghost btn--sm">🛠️ Mantenimiento</a>
+        <button class="cart" id="cartBtn" aria-label="Carrito">🛒<span id="cartCount">0</span></button>
+        <button class="burger" id="burger" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#inicio">Inicio</a>
+        <a href="#celulares">Celulares</a>
+        <a href="#computadoras">Computadoras</a>
+        <a href="#laptops">Laptops</a>
+        <a href="#audifonos">Audífonos</a>
+        <a href="#mantenimiento">Mantenimiento</a>
+        <a href="#video">Video</a>
+        <a href="#contacto">Ubicación</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__kicker">TechStore &amp; Service · Cerro de Pasco · Perú</p>
+          <h1>Tu mundo tech en <span id="typed">Celulares</span></h1>
+          <p class="hero__sub">Compra equipos nuevos y deja tu tecnología como nueva con nuestro servicio técnico. Agenda tu cita en un minuto.</p>
+          <div class="hero__btns">
+            <a href="#celulares" class="btn btn--light">Ver productos</a>
+            <a href="#mantenimiento" class="btn btn--outline">Agendar mantenimiento</a>
+          </div>
+        </div>
+
+        <!-- Imagen principal: clic para cambiarla o pon img/hero.png -->
+        <div class="hero__media">
+          <label class="img-slot" title="Haz clic para cambiar la imagen">
+            <img id="heroImg" src="img/foto.jpeg" alt="Equipo destacado PascoCity">
+            <span class="img-slot__badge">📷 Cambiar</span>
+            <input type="file" accept="image/*" hidden id="heroInput">
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2>Explora nuestra gama de productos</h2>
+        </header>
+        <div class="cats" id="cats">
+          <a href="#celulares" class="cat"><span>📱</span><b>Celulares</b></a>
+          <a href="#computadoras" class="cat"><span>🖥️</span><b>Computadoras</b></a>
+          <a href="#laptops" class="cat"><span>💻</span><b>Laptops</b></a>
+          <a href="#audifonos" class="cat"><span>🎧</span><b>Audífonos</b></a>
+          <a href="#mantenimiento" class="cat cat--accent"><span>🛠️</span><b>Mantenimiento</b></a>
+          <a href="#contacto" class="cat"><span>📍</span><b>Ubicación</b></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRUSELES DE PRODUCTOS -->
+    <section class="section section--alt" id="celulares">
+      <div class="container">
+        <header class="section__head"><h2>Celulares</h2><p>Los mejores modelos al mejor precio.</p></header>
+        <div class="carousel" id="car-celulares"></div>
+      </div>
+    </section>
+
+    <section class="section" id="computadoras">
+      <div class="container">
+        <header class="section__head"><h2>Computadoras</h2><p>PC de escritorio para estudio, oficina y gaming.</p></header>
+        <div class="carousel" id="car-computadoras"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="laptops">
+      <div class="container">
+        <header class="section__head"><h2>Laptops</h2><p>Para oficina, estudios, diseño y juegos.</p></header>
+        <div class="carousel" id="car-laptops"></div>
+      </div>
+    </section>
+
+    <section class="section" id="audifonos">
+      <div class="container">
+        <header class="section__head"><h2>Audífonos</h2><p>Sonido nítido para trabajar, estudiar y jugar.</p></header>
+        <div class="carousel" id="car-audifonos"></div>
+      </div>
+    </section>
+
+    <!-- MANTENIMIENTO / CITAS -->
+    <section class="section section--blue" id="mantenimiento">
+      <div class="container service">
+        <div class="service__info">
+          <h2>Mantenimiento de todos tus equipos tecnológicos</h2>
+          <p>Reparamos y damos mantenimiento a celulares, laptops, computadoras y más. Agenda tu cita y te confirmamos por WhatsApp.</p>
+          <ul class="service__list">
+            <li>✅ Limpieza y cambio de pasta térmica</li>
+            <li>✅ Formateo e instalación de programas</li>
+            <li>✅ Cambio de pantallas, baterías y teclados</li>
+            <li>✅ Diagnóstico de fallas</li>
+          </ul>
+        </div>
+
+        <form class="form" id="citaForm" novalidate>
+          <h3>Agenda tu cita</h3>
+
+          <div class="form__row">
+            <label>Nombres y apellidos
+              <input type="text" name="nombre" required placeholder="Ej. Juan Pérez">
+            </label>
+            <label>DNI
+              <input type="text" name="dni" required inputmode="numeric" maxlength="8" pattern="[0-9]{8}" placeholder="8 dígitos">
+            </label>
+          </div>
+
+          <div class="form__row">
+            <label>Celular / WhatsApp
+              <input type="tel" name="telefono" required inputmode="tel" placeholder="9XX XXX XXX">
+            </label>
+            <label>Correo (opcional)
+              <input type="email" name="correo" placeholder="correo@ejemplo.com">
+            </label>
+          </div>
+
+          <div class="form__row">
+            <label>Tipo de equipo
+              <select name="equipo" required>
+                <option value="">Selecciona</option>
+                <option>Celular</option>
+                <option>Laptop</option>
+                <option>Computadora</option>
+                <option>Tablet</option>
+                <option>Impresora</option>
+                <option>Otro</option>
+              </select>
+            </label>
+            <label>Marca y modelo
+              <input type="text" name="modelo" required placeholder="Ej. HP 15-fd0152">
+            </label>
+          </div>
+
+          <div class="form__row">
+            <label>Servicio
+              <select name="servicio" required>
+                <option value="">Selecciona</option>
+                <option>Mantenimiento preventivo</option>
+                <option>Reparación</option>
+                <option>Formateo / Software</option>
+                <option>Cambio de pantalla o batería</option>
+                <option>Diagnóstico</option>
+              </select>
+            </label>
+            <label>Fecha
+              <input type="date" name="fecha" id="fecha" required>
+            </label>
+          </div>
+
+          <div class="form__row">
+            <label>Hora
+              <select name="hora" id="hora" required></select>
+            </label>
+            <label>Problema del equipo
+              <input type="text" name="detalle" placeholder="Cuéntanos qué le pasa">
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Agendar cita</button>
+          <p class="form__msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="section" id="video">
+      <div class="container">
+        <header class="section__head"><h2>Conoce PascoCity</h2><p>Mira cómo llegar y cómo trabajamos.</p></header>
+        <div class="video" id="videoBox"></div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN Y WHATSAPP -->
+    <section class="section section--alt" id="contacto">
+      <div class="container contact">
+        <div class="contact__map">
+          <iframe id="mapFrame" title="Ubicación de PascoCity" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact__info">
+          <p class="contact__label">Tienda principal</p>
+          <h2 id="contactoDireccion">Cerro de Pasco, Perú</h2>
+          <p id="contactoHorario" class="contact__hours"></p>
+          <div class="contact__btns" id="waList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong>PascoCity</strong> · TechStore &amp; Service<br>
+        <small>Cerro de Pasco, Perú</small>
+      </div>
+      <small>© <span id="year"></span> PascoCity. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <!-- Botones flotantes -->
+  <a class="fab fab--wa" id="fabWa" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬</a>
+  <button class="fab fab--top" id="toTop" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
